@@ -81,3 +81,25 @@ img{
   border-radius: 10px;
 }
 
+#gallery img{
+  max-width: 100%;
+}
+
+#cta{
+  background-color: #3D340C;
+  color: #f3f3f3;
+  padding: 3% 15% 0;
+}
+
+.heading{
+  width:70%;
+  color: #fff;
+}
+
+#cta h5{
+  font-size: 13px;
+}
+
+.accordion-item {  
+  margin-bottom: 25px;
+} 
