@@ -26,14 +26,15 @@ h5 {
   letter-spacing: 0.5px;
 }
 
-a{
+a {
   color: initial;
 }
+
 img {
   display: inline;
 }
 
-.container-fluid,
+/* .container-fluid, */
 section,
 footer {
   padding: 2% 8%;
@@ -43,10 +44,9 @@ footer {
   background: linear-gradient(89.36deg, rgba(255, 236, 210, 0.4) -6.96%, rgba(193, 249, 195, 0.4) 105.9%);
   padding-bottom: 0;
   position: relative;
-  left: 0;
-  top: 0;
-  bottom: 50px;
+  height: 450px;
 }
+
 
 #services {
   background: linear-gradient(0deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), rgba(214, 201, 182, 0.9);
@@ -61,19 +61,39 @@ footer {
 .intro-image {
   position: absolute;
   left: 50%;
-  bottom: -1%;
+  bottom: 0;
+  margin-bottom: 0;
 }
 
+#intro .words {
+  padding-top: 10%;
+}
+
+.tri {
+  position: absolute;
+  top: 50px;
+  right: 30px;
+}
+
+.rev {
+  position: absolute;
+  left: 30%;
+  top: 60%;
+}
 
 .navbar {
   background: #FEFDF7;
 }
 
-.logo{
+.logo {
   max-width: 70%;
 }
 
+.dots {
+  position: relative;
+  left: 40%;
 
+}
 
 .cta-button,
 .colored-button {
@@ -149,9 +169,10 @@ fieldset {
 #cta h5 {
   font-size: 13px;
 }
-.accordion{
+
+.accordion {
   color: #3D340C;
- 
+
 }
 
 .accordion-item {
@@ -165,7 +186,10 @@ fieldset {
   border: 0;
 }
 
-.accordion-button, .accordion-item,.accordion-button:focus,.accordion-button:not(.collapsed) {
+.accordion-button,
+.accordion-item,
+.accordion-button:focus,
+.accordion-button:not(.collapsed) {
   background-color: #f3f3f3;
 }
 
@@ -174,8 +198,9 @@ fieldset {
 
 }
 
-.accordion-body{
-  color: #806F27;;
+.accordion-body {
+  color: #806F27;
+  ;
 }
 
 footer {
@@ -194,7 +219,10 @@ footer li,
 }
 
 #about .container,
-#why .container, #team .container{
+#why .container,
+#team .container,
+#cta .container,
+.mobile-img {
   display: none;
 }
 
@@ -214,24 +242,183 @@ footer li,
   flex: 1;
 }
 
-@media (max-width:700px) {
-h1{
-  font-weight: 400;
-  font-size: 34px;
+/*  */
+
+#reviews .container {
+  background-color: white;
+  padding: 0;
+  border-radius: 16px;
+ 
 }
-  h4{
+
+.card {
+  border: none
+}
+
+.profile img {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%
+}
+
+.second {
+  border-left: 2px dotted lightgrey;
+  border-right: 2px dotted lightgrey
+}
+
+@media only screen and (max-width: 600px) {
+  .second {
+    border: none;
+    border-top: 2px dotted lightgrey;
+    margin-top: 25px
+  }
+
+  .third {
+    border-top: 2px dotted lightgrey;
+    margin-top: 25px
+  }
+
+  .icon {
+    margin-top: 20px;
+    top: 0
+  }
+}
+
+.fa-quote-left:before {
+  font-size: 7px;
+  color: orangered;
+  position: relative;
+  bottom: 5px
+}
+
+.intro {
+  font-size: 11px;
+  margin-left: 13px;
+  position: relative;
+  bottom: 8px
+}
+
+.row {
+  padding-bottom: 53px
+}
+
+.company {
+  position: absolute;
+  bottom: -42px
+}
+
+.fa-amazon:before {
+  content: "\f270";
+  font-size: 23px
+}
+
+#reviews .icon {
+  margin-bottom: 15px;
+  position: relative;
+  bottom: 20px
+}
+
+
+/*  */
+.signupFrm {
+  position: relative;
+
+  bottom: 50px;
+}
+
+
+.form {
+  background-color: white;
+  width: 400px;
+  border-radius: 8px;
+  padding: 20px 40px;
+  box-shadow: 0 10px 25px rgba(92, 99, 105, .2);
+}
+
+
+.inputContainer {
+  position: relative;
+  height: 45px;
+  width: 90%;
+  margin-bottom: 17px;
+  border: 1px solid #3D340C;
+  border-radius: 3px;
+}
+
+.input {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  border: 1px solid #DADCE0;
+  border-radius: 7px;
+  font-size: 16px;
+  padding: 0 20px;
+  outline: none;
+  background: none;
+  z-index: 1;
+}
+
+
+.label {
+  position: absolute;
+  padding: 0 4px;
+  background-color: white;
+  color: #565A5C;
+  top: -7px;
+  left: 3px;
+  z-index: 10;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+::placeholder {
+  color: transparent;
+}
+
+.form .colored-button {
+  border-radius: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:700px) {
+  h1 {
+    font-weight: 400;
+    font-size: 34px;
+  }
+
+  h4 {
     text-align: left;
   }
+
   #about .container,
   #why .container,
-  #team .container {
+  #team .container,
+  #cta .container {
     display: flex;
     flex-direction: column;
   }
 
+  .mobile-img {
+    display: block;
+  }
+
   #about .row,
   #why .row,
-  #team .row {
+  #team .row,
+  #cta .row,
+  .dots,
+  .desktop-view {
     display: none;
   }
 
@@ -261,5 +448,24 @@ h1{
     margin-bottom: 20px;
   }
 
+  .form {
+    width: 100%;
+  }
+
+  #cta {
+    padding: 20px;
+  }
+
+  #cta .four {
+    position: relative;
+    right: 30px;
+    top: 20px;
+  }
+
+  .intro-image,
+  #intro {
+    position: static;
+    height: initial;
+  }
 
 }
